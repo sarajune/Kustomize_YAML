@@ -1,0 +1,14 @@
+bases:
+  - ../base
+
+namePrefix: dev-
+
+commonLabels:
+  env: dev
+
+configMapGenerator:
+- name: database-configmap
+  behavior: replace
+  files:
+    # configfile is used as key
+    - configs/config

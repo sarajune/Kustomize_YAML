@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: database-configmap
+data:
+  config: |
+    dbport=12344
+    dcname=sfsdf
+    dbssl=false
+    locktime=300
+    domainuser=

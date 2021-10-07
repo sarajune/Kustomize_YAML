@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx
+  name: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - image: nginx
+          name: nginx
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: database-configmap
+data:
+  config: |
+    dbport=1234
+    dcname=sfsdf
+    dbssl=false
+    locktime=300
+    domainuser=

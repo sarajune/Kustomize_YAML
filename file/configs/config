@@ -1,0 +1,5 @@
+dbport=156767
+dcname=dfsd
+dbssl=false
+locktime=300
+domainuser=somedts
